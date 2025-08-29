@@ -10,7 +10,6 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    
   });
 
   if (!loaded) {
@@ -20,15 +19,11 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+      <Stack screenOptions={{ headerShown: false }}>
+        {/* We only need the index (login) screen for Task 4 */}
+        <Stack.Screen name="index" />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
   );
 }
-
-
-
-
