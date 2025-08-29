@@ -17,13 +17,5 @@ export default function RootLayout() {
     return null;
   }
 
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false }}>
-        {/* We only need the index (login) screen for Task 4 */}
-        <Stack.Screen name="index" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
