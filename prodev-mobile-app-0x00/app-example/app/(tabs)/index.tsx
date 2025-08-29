@@ -1,3 +1,3 @@
 import { Text } from 'react-native';
 
-<Text>Welcome!</Text>
+<Text>First App Created</Text>
